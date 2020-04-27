@@ -23,7 +23,7 @@ We do not implement the function for administrators and nurses because the syste
 
 ER Diagram
 ---------------------------
-![](ER%20new.png)
+![](images/ER%20new.png)
 
 Database Operation Examples
 ---------------------------
