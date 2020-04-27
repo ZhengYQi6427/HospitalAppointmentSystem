@@ -5,12 +5,6 @@ Hospital Appointment Application
 
 Hospital Appointment Application is a Flask app to arrange appoinments with doctors in a given system. Users can register as either doctor or patient. 
 
-PostgreSQL account
-username: yz3622
-password: 7849
-
-URL: http://35.231.63.121:8080/auth/login
-
 Project Layout
 --------------
 ├── flaskr/
