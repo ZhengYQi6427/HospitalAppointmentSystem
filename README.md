@@ -1,7 +1,4 @@
 # HospitalAppointmentSystem
-================================
-Hospital Appointment Application
-================================
 
 Hospital Appointment Application is a Flask app to arrange appoinments with doctors in a given system. Users can register as either doctor or patient. 
 
