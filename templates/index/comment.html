@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Comment for {{ appointment_id }}{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    <label for="Rate">Score the Service (out of 5)</label>
+    <input name="Rate" id="Rate" required>
+    <label for="Comment">Comment</label>
+    <input name="Comment" id="Comment">
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Your Records{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+{% if info %}
+{% for item in info %}
+<article class="post">
+      <header>
+        <div>
+          <h1>Appointment ID: {{ item['appointment_id'] }}</h1>
+          <div class="about">Dr. {{ item['name'] }}, in Room {{ item['room'] }} on {{ item['appointmenttime'] }}</div>
+
+            {% if not item['disease_name'] %}
+            <div class="about">(Incompleted)</div>
+
+            {% endif %}
+        </div>
+      </header>
+      {% if item['disease_name'] %}
+        <p class="body">Diagnose result: {{ item['disease_name'] }}<br />Total fee: {{ item['total_fee'] }}</p>
+        {% if not flag[item['appointment_id']] %}
+          <a class="action" href="{{ url_for('index.comment', user_ID=user_ID, appointment_id=item['appointment_id']) }}">Click here</a> to comment
+        {% endif %}
+      {% endif %}
+</article>
+{% if not loop.last %}
+<hr>
+{% endif %}
+{% endfor %}
+{% else %}
+<p>NO RECORDS FOUND</p>
+{% endif %}
+{% endblock %}

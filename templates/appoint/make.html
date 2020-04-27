@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Results{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+{% if if_made %}
+<p>You have made an appointment with Dr.{{ doctor_name }} on {{ time }} successfully! </p>
+<a class="action" href="{{ url_for('index.patient_index', user_ID=user_ID) }}">Back</a>
+{% else %}
+<p>Sorry, not able to make your appointment.</p>
+<a class="action" href="{{ url_for('index.patient_index', user_ID=user_ID) }}">Back</a>
+{% endif %}
+{% endblock %}

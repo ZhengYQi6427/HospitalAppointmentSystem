@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Doctor Index{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+{% if g.user %}
+Welcome, Dr. {{ name }}!<br />
+<a class="action" href="{{ url_for('index.doctor_appointment', user_ID=user_ID) }}">Existed Appointment</a>
+<a class="action" href="{{ url_for('index.update', user_ID=user_ID) }}">Account Settings</a>
+<a class="action" href="{{ url_for('index.comment_view', user_ID=user_ID) }}">Your Comments</a>
+{% endif %}
+{% endblock %}

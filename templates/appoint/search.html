@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Search{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    <label for="Doctor_name">Doctor Name</label>
+    <input name="Doctor_name" id="Doctor_name">
+
+    <label for="Symptom1">Symptom 1</label>
+    <select name="Symptom1" id="Symptom1">
+        {% for name in syms_name %}
+        <option value="{{name['name']}}" SELECTED>{{ name['name'] }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="Symptom2">Symptom 2</label>
+    <select name="Symptom2" id="Symptom2">
+        {% for name in syms_name['name'] %}
+        <option value="{{name['name']}}" SELECTED>{{ name['name'] }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="Symptom3">Symptom 3</label>
+    <select name="Symptom3" id="Symptom3">
+        {% for name in syms_name['name'] %}
+        <option value="{{name['name']}}" SELECTED>{{ name['name'] }}</option>
+        {% endfor %}
+    </select>
+
+    <input type="submit" value="Search">
+</form>
+{% endblock %}

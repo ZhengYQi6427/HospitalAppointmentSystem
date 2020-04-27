@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Register{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    <label for="user_ID">User ID</label>
+    <input name="user_ID" id="user_ID" required>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+    <label for="email">Email</label>
+    <input name="email" id="email" required>
+
+    <p>Choose account type: </p>
+    <select name="accountType">
+        {% for type in types %}
+        <option value="{{type}}">{{ type }}</option>
+        {% endfor %}
+    </select>
+
+    <input type="submit" value="Register">
+</form>
+{% endblock %}

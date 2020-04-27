@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Addition Information of Patient{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    <label for="Patient_ID">Patient ID</label>
+    <input name="Patient_ID" id="Patient_ID" required>
+    <label for="Name">Name</label>
+    <input name="Name" id="Name" required>
+    <label for="Gender">Gender</label>
+    <select name="Gender" id="Gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+    <label for="Height">Height(cm)</label>
+    <input name="Height" id="Height">
+    <label for="Weight">Weight(cm)</label>
+    <input name="Weight" id="Weight">
+    <label for="Age">Age</label>
+    <input name="Age" id="Age">
+    <label for="BloodType">Blood Type</label>
+    <input name="BloodType" id="BloodType">
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

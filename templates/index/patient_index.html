@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Patient Index{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+{% if g.user %}
+Welcome!
+<a class="action" href="{{ url_for('appoint.search') }}">Make Appointments</a><br />
+<a class="action" href="{{ url_for('appoint.doctor_list') }}">Doctor List</a><br />
+<a class="action" href="{{ url_for('index.record_view', user_ID=user_ID) }}">Your Records</a><br />
+<a class="action" href="{{ url_for('index.update', user_ID=user_ID) }}">Account Settings</a><br />
+{% endif %}
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Results{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+{% if issue %}
+<p class="body">Possible issue:
+    {% for i in issue %}
+    {{ i['name'] }} ({{ i['profname'] }})<br />
+    {% endfor %}
+</p>
+{% endif %}
+
+{% if not doctors %}
+<p>Sorry, no doctor found for you</p>
+<p><a class="action" href="{{ url_for('appoint.doctor_list') }}">Click here</a> to get a full list of doctors</p>
+{% else %}
+{% for doc in doctors %}
+<article class="post">
+      <header>
+        <div>
+          <h1>{{ doc['name'] }}</h1>
+          <div class="about">{{ doc['title'] }}, score: {{ doc['avg'] }}, specialisation: {{ doc['specialization'] }}</div>
+            <div class="about">available on {{ doc['availabletime'] }}</div>
+        </div>
+          <a class="action" href="{{ url_for('appoint.make', user_ID=user_ID, doctor_ID=doc['doctor_id']) }}">Select</a>
+      </header>
+</article>
+{% if not loop.last %}
+<hr>
+{% endif %}
+{% endfor %}
+
+{% endif %}
+
+{% endblock %}

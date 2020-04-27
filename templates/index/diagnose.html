@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Diagnose for {{ appointment_id }}{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    <label for="Disease_name">Disease name</label>
+    <input name="Disease_name" id="Disease_name" required>
+    <label for="Medicine_id">Medicine ID</label>
+    <input name="Medicine_id" id="Medicine_id">
+    <label for="Medicine_quantity">Medicine quantity</label>
+    <input name="Medicine_quantity" id="Medicine_quantity">
+    <label for="Total_fee">Total fee</label>
+    <input name="Total_fee" id="Total_fee" required>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

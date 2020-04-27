@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Addition Information of Doctor{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    <label for="Doctor_ID">Doctor ID</label>
+    <input name="Doctor_ID" id="Doctor_ID" required>
+    <label for="Name">Name</label>
+    <input name="Name" id="Name" required>
+    <label for="Title">Title</label>
+    <input name="Title" id="Title">
+    <label for="Specialization">Specialization</label>
+    <input name="Specialization" id="Specialization" required>
+    <label for="AvailableTime">Available Time</label>
+    <select name="AvailableTime" id="AvailableTime">
+        {% for day in days %}
+        <option value="{{day}}">{{ day }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

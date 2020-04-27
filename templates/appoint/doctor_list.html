@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Doctor List{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+{% for doc in doctors %}
+<article class="post">
+      <header>
+        <div>
+          <h1>{{ doc['name'] }}</h1>
+          <div class="about">{{ doc['title'] }}, score: {{ doc['avg'] }}, specialisation: {{ doc['specialization'] }}</div>
+            <div class="about">available on {{ doc['availabletime'] }}</div>
+        </div>
+          <a class="action" href="{{ url_for('appoint.make', user_ID=user_ID, doctor_ID=doc['doctor_id']) }}">Make an Appointment</a>
+      </header>
+</article>
+{% if not loop.last %}
+<hr>
+{% endif %}
+{% endfor %}
+<a class="action" href="{{ url_for('index.patient_index', user_ID=user_ID) }}">Back</a>
+{% endblock %}
