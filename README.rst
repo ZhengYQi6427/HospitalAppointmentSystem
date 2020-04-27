@@ -21,6 +21,9 @@ They can view their appointment records including appointment time, doctor, loca
 
 We do not implement the function for administrators and nurses because the system can work fine with current functions. The role nurse doesn't have many iteration with other roles in the system. Administrators can be added in further development. 
 
+ER Diagram
+---------------------------
+![](ER%20new.png)
 
 Database Operation Examples
 ---------------------------
