@@ -4,44 +4,36 @@ Hospital Appointment Application
 
 Hospital Appointment Application is a Flask app to arrange appoinments with doctors in a given system. Users can register as either doctor or patient. 
 
-PostgreSQL account
-username: yz3622
-password: 7849
-
-URL: http://35.231.63.121:8080/auth/login
-
-Project Layout
---------------
-├── flaskr/
-│   ├── __init__.py
-│   ├── db.py
-│   ├── auth.py
-│   ├── index.py
-│   ├── appoint.py
-│   ├── templates/
-│   │   ├── base.html
-│   │   ├── auth/
-│   │   │   ├── login.html
-│   │   │   ├── register_patient.html
-│   │   │   ├── register_doctor.html
-│   │   │   └── register.html
-│   │   ├── appoint/
-│   │   │   ├── doctor_list.html
-│   │   │   ├── make.html
-│   │   │   ├── result.html
-│   │   │   └── search.html
-│   │   └── index/
-│   │       ├── comment_view.html
-│   │       ├── comment.html
-│   │       ├── diagnose.html
-│   │       ├── doctor_appointment.html
-│   │       ├── doctor_index.html
-│   │       ├── patient_index.html
-│   │       ├── record_view.html
-│   │       └── update.html
-│   └── static/
-│       └── style.css
-└── setup.py
+Project Layout:
+__init__.py
+db.py
+auth.py
+index.py
+appoint.py
+templates/
+    base.html
+    auth/
+        login.html
+        register_patient.html
+        register_doctor.html
+        register.html
+    appoint/
+        doctor_list.html
+        make.html
+        result.html
+        search.html
+    index/
+        comment_view.html
+        comment.html
+        diagnose.html
+        doctor_appointment.html
+        doctor_index.html
+        patient_index.html
+        record_view.html
+        update.html
+static/
+    style.css
+setup.py
 
 
 Description
