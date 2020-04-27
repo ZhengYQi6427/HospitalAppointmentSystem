@@ -4,38 +4,6 @@ Hospital Appointment Application
 
 Hospital Appointment Application is a Flask app to arrange appoinments with doctors in a given system. Users can register as either doctor or patient. 
 
-Project Layout:
-__init__.py
-db.py
-auth.py
-index.py
-appoint.py
-templates/
-    base.html
-    auth/
-        login.html
-        register_patient.html
-        register_doctor.html
-        register.html
-    appoint/
-        doctor_list.html
-        make.html
-        result.html
-        search.html
-    index/
-        comment_view.html
-        comment.html
-        diagnose.html
-        doctor_appointment.html
-        doctor_index.html
-        patient_index.html
-        record_view.html
-        update.html
-static/
-    style.css
-setup.py
-
-
 Description
 -----------
 For every user, he can register with user_id, password, email and he needs to choose account type: doctor or patient. Different account type will redirect to different webpages and have different functions.  
