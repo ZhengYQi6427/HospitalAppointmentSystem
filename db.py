@@ -4,7 +4,7 @@ import click
 from flask import current_app, g
 from flask.cli import with_appcontext
 
-DATABASEURI = "postgresql://yz3622:7849@35.231.103.173/proj1part2"
+DATABASEURI = "postgresql://NAME:PASSWORD@PATH"
 engine = create_engine(DATABASEURI)
 
 def init_db():
