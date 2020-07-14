@@ -3,8 +3,7 @@
 
 Hospital Appointment Application is a Flask app to arrange appoinments with doctors in a given system. Users can register as either doctor or patient. 
 
-Description
------------
+## Description
 For every user, he can register with user_id, password, email and he needs to choose account type: doctor or patient. Different account type will redirect to different webpages and have different functions.  
 
 1. For doctors
@@ -20,12 +19,10 @@ They can view their appointment records including appointment time, doctor, loca
 
 We do not implement the function for administrators and nurses because the system can work fine with current functions. The role nurse doesn't have many iteration with other roles in the system. Administrators can be added in further development. 
 
-ER Diagram
----------------------------
+## ER Diagram
 ![](images/ER%20new.png)
 
-Database Operation Examples
----------------------------
+## Database Operation Examples
 1. Select the most suitable doctor:
 
 (select * from (select * from doctor where specialization= (%s) ) as T1 
@@ -50,4 +47,5 @@ AND T2.time = T1.appointmenttime
 
 The appointment information involves of six tables appoint, patient, appointment, doctor, record and diagnose. Some appointments do not have record, so we need to use left join to list all the appointments no matter whether they have records. 
 
-
+## Techonologies Used
+PostgreSQL, Flask (deployed on GCE)
